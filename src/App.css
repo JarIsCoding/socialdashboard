@@ -74,14 +74,18 @@ body {
   background-color: hsl(232, 19%, 90%);
 }
 
-.darkbg .switch:hover{
-  .darkswitch{
-    color: hsl(232, 19%, 90%);
-  }
+.darkbg .slider:hover ~ .darkswitch {
+  color: white;
 }
 
-.darkswitch{
+.darkswitch {
+  color: hsl(228, 34%, 66%);
+  font-weight: 700;
+}
+
+.lightswitch {
   color: white;
+  font-weight: 700;
 }
 
 /* The switch - the box around the slider */

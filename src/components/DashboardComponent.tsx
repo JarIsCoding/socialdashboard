@@ -5,6 +5,15 @@ import { Col, Container, Row, Stack } from 'react-bootstrap';
 const DashboardComponent = () => {
     const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true);
     const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 576);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+      setIsHovered(true);
+    };
+  
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+    };
 
     const handleTheme = () => {
         setIsDarkTheme(prevTheme => !prevTheme);
@@ -34,11 +43,13 @@ const DashboardComponent = () => {
                             Total Followers: 23,004
                         </p>
                     </Col>
-                    <hr className='d-sm-none d-block' />
+                    <div className='d-sm-none d-block '>
+                    <hr/>
+                    </div>
                     <Col lg={6} className={`${isMobile ? 'px-0' : 'px-0 pt-5'}`}>
                         <Row className='gx-0 xs:px-4'>
                             <Col xs={6} lg={10} className='pt-1'>
-                                <p className={`darkswitch ${isMobile ? 'lg:text-end px-3 pb-3 fw2' : 'lg:text-end pe-3 fw2'}`}>
+                                <p className={`darkswitch ${isMobile ? 'lg:text-end px-3 pb-3' : 'lg:text-end pe-3'}`}>
                                     Dark Mode
                                 </p>
                             </Col>
