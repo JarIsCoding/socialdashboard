@@ -1,12 +1,10 @@
-// Your name 
+// Your name - Jared Ly
 
-// Date Revised: This is the last day you saved. 
+// Date Revised - 3/22/24
 
-// Exercise or Lab name 
+// Social DashBoard
 
-// Brief Description of what you did. 
-
-// You can add multiple dates with description.
+// used a component and used style guide to complete design based on observation with the ts framework
 
 // Peer Review: Joseph Poncini - Site overall looks very impressive. On desktop I think you nailed the sizing and spacing between the different Cards. As far as file structure goes you could probably make your code a lot better of a place to be in and debug if you compartementalize it a bit more. The cards on the tops for example all have the same format so they couldve been a component and then you just pass in the info you need with props. 
 
