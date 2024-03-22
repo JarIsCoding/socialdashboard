@@ -1,33 +1,87 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+} 
+
 @font-face {
   font-family: int;
   src: url(./fonts/Inter/static/Inter-Regular.ttf);
 }
 
-.lightbg{
-  background-color: white;
-  height: 100vh;
+body {
   font-family: int;
 }
-.lightpattern{
+
+
+.lightbg {
+  background-color: white;
+}
+
+.lightpattern {
   background-color: hsl(225, 100%, 98%);
   height: 30vh;
-  width: 100%;
-  font-family: int;
 }
-.darkbg{
+
+.darkbg {
   background-color: hsl(230, 17%, 14%);
-  height: 100vh;
-  font-family: int;
 }
-.darkpattern{
+
+.darkpattern {
   background-color: hsl(232, 19%, 15%);
   height: 30vh;
-  width: 100%;
-  font-family: int;
 }
-.darktxt{
+
+.darktxt {
   color: white;
-  font-family: int;
+}
+
+.container-wrapper {
+  min-height: 950px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-wrappermob {
+  min-height: 2500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.darkbg .facecard:hover, 
+.darkbg .twitcard:hover, 
+.darkbg .instacard:hover, 
+.darkbg .tubecard:hover {
+  background-color: hsl(232, 19%, 35%);
+}
+
+.facecardlight:hover,
+.twitcardlight:hover,
+.instacardlight:hover,
+.tubecardlight:hover {
+  background-color: hsl(232, 19%, 90%); /* Lighter color when hovering in light mode */
+}
+
+.darkbg .normcard:hover{
+  background-color: hsl(232, 19%, 35%)
+}
+
+.normcardlight:hover{
+  background-color: hsl(232, 19%, 90%);
+}
+
+.darkbg .switch:hover{
+  .darkswitch{
+    color: hsl(232, 19%, 90%);
+  }
+}
+
+.darkswitch{
+  color: white;
 }
 
 /* The switch - the box around the slider */
@@ -58,6 +112,30 @@
   transition: .4s;
 }
 
+.lightbg .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #e5e7eb,  #e5e7eb);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:hover{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, hsl(210, 78%, 56%),  hsl(146, 68%, 55%));
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 .slider:before {
   position: absolute;
   content: "";
@@ -74,22 +152,16 @@
   border-radius: 50%;
 }
 
-/* Add styles for light mode */
 .lightbg .slider:before {
-  background-color: white; /* Change this to the color you want for the circle in light mode */
+  background-color: white; 
 }
 
-/* Add styles for dark mode */
-.darkbg .slider:before {
-  background-color: black; /* Change this to the color you want for the circle in dark mode */
+.slider:before {
+  background-color: black;
 }
 
 input:checked + .slider {
   background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
@@ -275,8 +347,8 @@ input:checked + .slider:before {
 }
 
 .margincard2{
-  padding-left: 15px !important;
-  padding-right: 15px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 .bignum{
