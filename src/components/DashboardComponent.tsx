@@ -55,7 +55,7 @@ const DashboardComponent = () => {
                             </Col>
                             <Col xs={5} lg={1} className='px-0 ms-2 text-end'>
                                 <label className="switch">
-                                    <input type="checkbox"/>
+                                    <input onClick={handleTheme} type="checkbox"/>
                                     <span className="slider round"></span>
                                 </label>
                             </Col>
